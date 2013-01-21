@@ -56,9 +56,13 @@ Un script de recalcul pourrait être créé sous forme de cron, il ferait le cal
 
 Presque aucune validation des modèles n'a été mise en place. Il suffirait de prendre le temps d'ajouter les validations dans les modèles. Nous pourrions ainsi validé la cohérence des longitudes, interdire les dates dans le futur ...
 
+***
+
 ##### Comme les infos de température ne sont pas modifiable pour l'instant, le user n'est pas aidé pour valider ces choix
 
 En utilisant un peu d'Ajax dans les formulaires, certaines validations avancé pourrait être faite. Par exemple au niveau des températures, nous pourrions faire apparaitre une alerte de confirmation si l'écart de température entre deux jours de suite était supérieur à 30 degré
+
+***
 
 ##### Les tables innoDB
 
