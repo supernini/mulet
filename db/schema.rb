@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(:version => 20130120222207) do
     t.datetime "updated_at",                                 :null => false
   end
 
-  add_index "lac_fish_by_dates", ["lac_id"], :name => "index_lac_fish_by_dates_on_lac_id"
+  add_index "lac_fish_by_dates", ["lac_id"], :name => "lac_fish_by_dates_lac_id_fk"
 
   create_table "lac_temperatures", :force => true do |t|
     t.integer  "lac_id"
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(:version => 20130120222207) do
     t.datetime "updated_at",                                 :null => false
   end
 
-  add_index "lac_temperatures", ["lac_id"], :name => "index_lac_temperatures_on_lac_id"
+  add_index "lac_temperatures", ["lac_id"], :name => "lac_temperatures_lac_id_fk"
 
   create_table "lacs", :force => true do |t|
     t.string   "name"
@@ -58,5 +58,9 @@ ActiveRecord::Schema.define(:version => 20130120222207) do
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+
+  add_foreign_key "lac_fish_by_dates", "lacs", :name => "lac_fish_by_dates_lac_id_fk"
+
+  add_foreign_key "lac_temperatures", "lacs", :name => "lac_temperatures_lac_id_fk"
 
 end

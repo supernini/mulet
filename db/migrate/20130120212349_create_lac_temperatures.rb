@@ -7,6 +7,6 @@ class CreateLacTemperatures < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :lac_temperatures, :lac_id
+    add_foreign_key(:lac_temperatures, :lacs)
   end
 end
