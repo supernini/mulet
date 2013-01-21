@@ -1,0 +1,22 @@
+- model_class = Lac
+.page-header
+  %h1=t '.title', :default => model_class.model_name.human.pluralize
+%table.table.table-striped
+  %thead
+    %tr
+      %th= model_class.human_attribute_name(:id)
+      %th= model_class.human_attribute_name(:name)
+      %th= model_class.human_attribute_name(:longitude)
+      %th=t '.actions', :default => t("helpers.actions")
+  %tbody
+    - @lacs.each do |lac|
+      %tr
+        %td= link_to lac.id, lac_path(lac)
+        %td= lac.name
+        %td= lac.longitude
+        %td
+          = link_to t('.edit', :default => t("helpers.links.edit")), edit_lac_path(lac), :class => 'btn btn-mini'
+          = link_to t('.temperature'), lac_temperatures_path(:lac_id => lac.id), :class => 'btn btn-mini'
+          = link_to t('.destroy', :default => t("helpers.links.destroy")), lac_path(lac), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-mini btn-danger'
+
+= link_to t('.new', :default => t("helpers.links.new")), new_lac_path, :class => 'btn btn-primary'

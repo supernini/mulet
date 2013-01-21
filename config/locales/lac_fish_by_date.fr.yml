@@ -1,0 +1,7 @@
+fr:
+  lac_fish_by_dates:
+    index:
+      title: "Rechercher un lac"
+    search:
+      title: "Résultats a la date demandé"
+      no_result: "Aucun résultat trouvé"

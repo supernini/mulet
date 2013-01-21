@@ -1,0 +1,15 @@
+fr:
+  activerecord:
+    attributes:
+      lac:
+        name: "Nom"
+        longitude: "Longitude"
+  lacs:
+    new:
+      title: "Ajouter un lac"
+    edit:
+      title: "Modifier un lac"
+    index:
+      confirm: "Êtes-vous certain ?"
+      title: "Liste des lacs"
+      temperature: "Température"

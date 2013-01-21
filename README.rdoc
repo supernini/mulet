@@ -1,0 +1,3 @@
+== Welcome to Mulet
+
+This apps, is just to show what you can do with Rails + TwitterBoostrap and a good data model

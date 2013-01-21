@@ -1,0 +1,7 @@
+= simple_form_for @lac, :html => { :class => 'form-horizontal' } do |f|
+  = f.input :name
+  = f.input :longitude
+  = f.input :initial_volume
+  .form-actions
+    = f.button :submit, :class => 'btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), lacs_path, :class => 'btn'

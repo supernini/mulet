@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  lac: 
+  date: 2013-01-20
+  fish_volume: 1
+
+two:
+  lac: 
+  date: 2013-01-20
+  fish_volume: 1

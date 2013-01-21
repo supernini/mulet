@@ -1,0 +1,4 @@
+- model_class = LacTemperature
+.page-header
+  %h1=t '.title', :name => @lac.name, :default => t('helpers.titles.new', :model => model_class.model_name.human, :default => "New #{model_class.model_name.human}")
+= render :partial => "form"

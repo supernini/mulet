@@ -1,0 +1,7 @@
+= simple_form_for @lac_temperature, :html => { :class => 'form-horizontal' } do |f|
+  = f.hidden_field :lac_id
+  = f.input :when_happen, :input_html => { :class => 'datepicker' }, :as => :string
+  = f.input :temperature
+  .form-actions
+    = f.button :submit, :class => 'btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), lac_temperatures_path(:lac_id => @lac.id), :class => 'btn'

@@ -1,0 +1,14 @@
+fr:
+  activerecord:
+    attributes:
+      lac_temperature:
+        when_happen: "Observé le"
+        temperature: "Température"
+  lac_temperatures:
+    date_in_past_errors: "Les dates doivent toujours etre croissante"
+    new:
+      title: "Ajouter un releve pour le lac %{name}"
+    edit:
+      title: "Modifier un releve pour le lac %{name}"
+    index:
+      title: "Température observé au %{name}"

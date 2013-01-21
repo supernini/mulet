@@ -1,0 +1,4 @@
+= simple_form_for @lac_fish_by_date, :url => lac_fish_by_date_search_path, :html => { :class => 'form-horizontal' } do |f|
+  = f.input :date, :input_html => { :class => 'datepicker' }, :as => :string
+  .form-actions
+    = f.button :submit, "Rechercher", :class => 'btn-primary'

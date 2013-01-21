@@ -1,0 +1,20 @@
+- model_class = LacFishByDate
+.page-header
+  %h1=t '.title', :default => model_class.model_name.human.pluralize
+= render :partial => 'form'
+- if @lac_fish_by_dates.count == 0
+  %h2
+    = t '.no_result'
+- else
+  %table.table.table-striped
+    %thead
+      %tr
+        %th= Lac.human_attribute_name(:name)
+        %th= model_class.human_attribute_name(:date)
+        %th= model_class.human_attribute_name(:fish_volume)
+    %tbody
+      - @lac_fish_by_dates.each do |lac_fish_by_date|
+        %tr
+          %td= lac_fish_by_date.lac.name
+          %td= lac_fish_by_date.date
+          %td= lac_fish_by_date.fish_volume

@@ -1,0 +1,18 @@
+- model_class = LacTemperature
+.page-header
+  %h1=t '.title', :name => @lac.name, :default => model_class.model_name.human.pluralize
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th= model_class.human_attribute_name(:id)
+      %th= model_class.human_attribute_name(:when_happen)
+      %th= model_class.human_attribute_name(:temperature)
+  %tbody
+    - @lac_temperatures.each do |lac_temperature|
+      %tr
+        %td= link_to lac_temperature.id, lac_temperature_path(lac_temperature)
+        %td= lac_temperature.when_happen
+        %td= lac_temperature.temperature
+
+= link_to t('.new', :default => t("helpers.links.new")), new_lac_temperature_path(:lac_id => @lac.id), :class => 'btn btn-primary'
