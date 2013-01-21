@@ -34,22 +34,26 @@ Regcarder les resultats en allant à l'adresse
 
 ## Quelques limites
 
-Il faut que des données ai été saisies à une date précise pour avoir des résultats 
+##### Il faut que des données ai été saisies à une date précise pour avoir des résultats 
 
-	En modifiant la requète nous pourrions chercher pour la journée la plus proche au lieu de faire une recherche exacte
+En modifiant la requète nous pourrions chercher pour la journée la plus proche au lieu de faire une recherche exacte
 
-Si un lac n'a aucune données, il ne resortira pas dans les résulats
+***
 
-	Il aurait été possible de forcer la création d'une donnée par defaut dans la table lac_fish_by_dates, lors de la création du lac. Un simple after_create aurait fait la job
+##### Si un lac n'a aucune données, il ne resortira pas dans les résulats
 
-Il est impossible d'entrer une donnée pour une date passé ou de modifier une donnée déjà saisie car cela aurait un impact sur les données plus recentes, la masse de calcul pourrait ralentir les users qui saissisent (et si plusieurs modification pour le même lac, le calcul serait refait à chaque fois)
+Il aurait été possible de forcer la création d'une donnée par defaut dans la table lac_fish_by_dates, lors de la création du lac. Un simple after_create aurait fait la job
 
-	Un script de recalcul pourrait etre créé sous forme de cron, il ferai le calcul de tous les champs passés qui ont été modifié (comparaison des updated_at vs created_at).
+***
+
+##### Il est impossible d'entrer une donnée pour une date passé ou de modifier une donnée déjà saisie car cela aurait un impact sur les données plus recentes, la masse de calcul pourrait ralentir les users qui saissisent (et si plusieurs modification pour le même lac, le calcul serait refait à chaque fois)
+
+Un script de recalcul pourrait etre créé sous forme de cron, il ferai le calcul de tous les champs passés qui ont été modifié (comparaison des updated_at vs created_at).
 
 
 ## Les tests
 
-Aucun test n'a été construit pour cet exercises, bien entendu dans des conditions réel il aurait du impérativement être fait. 
+Aucun test n'a été construit pour cet exercises, bien entendu dans des conditions réelles cela aurait dû impérativement être fait. 
 
 ## Schema de la DB
 
@@ -60,7 +64,7 @@ Aucun test n'a été construit pour cet exercises, bien entendu dans des conditi
 
 La GRANDE DECOUVERTE
 - Entre avril et juillet (pendant la reproduction),
-- Dès que la temperature est supérieur a 20 degré, le volume de poisson augmente de 3*log10(longitude) % par jour
+- Dès que la temperature est supérieur à 20 degré, le volume de poisson augmente de 3*log10(longitude) % par jour
 
 Entre juillet et octobre,
 - Si la temperature est entre 25 et 35, le pecheur sort plus, donc cette fois c'est une baisse de 2*log10(longitude) %
