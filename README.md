@@ -5,6 +5,7 @@ Cette apps, est juste pour démontrer ce qui peut ce faire rapidement en utilisa
 ## Comment utiliser
 
 Récupérer le code source sur github depuis la ligne de commande
+
 	git clone git@github.com:supernini/mulet.git
 
 Installer les gems depuis la ligne de commande
